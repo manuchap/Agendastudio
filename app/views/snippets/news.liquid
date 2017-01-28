@@ -1,12 +1,7 @@
 <div class='carousel slide' id='myCarousel'>
   <div class='carousel-inner'>
     <div class='item active'>
-      {% case wagon %}
-      {% when true %}
       {{ contents.news.first.photo | image_tag }}
-      {% else %}
-      {{ contents.news.first.photo | image_tag | resize: '700x446' }}
-      {% endcase %}
       <div class='carousel-caption'>
         <p>{{ contents.news.first.texte }}</p>
         <p>{{ contents.news.first.date | localized_date: '%d %B %Y', 'fr' }}</p>
@@ -15,12 +10,7 @@
     {% for new in contents.news %}
     {% if new.next.photo %}
     <div class='item'>
-      {% case wagon %}
-      {% when true %}
       {{ new.next.photo | image_tag }}
-      {% else %}
-      {{ new.next.photo | image_tag | resize: '700x446' }}
-      {% endcase %}
       <div class='carousel-caption'>
         <p>{{ new.next.texte }}</p>
         <p>{{ new.next.date | localized_date: '%d %B %Y', 'fr' }}</p>
