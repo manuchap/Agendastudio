@@ -1,0 +1,24 @@
+<script>
+  $(document).ready(function(){
+    var evnts = function(){
+      return {
+        "event":
+        [
+        {% for resa in contents.resas %}
+        {"date":"{{ resa.date | date: "%m/%d/%Y" }}","title": "{{ resa.groupe.nom }}" }
+        {% unless forloop.last %} , {% endunless %}
+        {% endfor %}
+        ]
+      }
+    };
+    $('#calendar').Calendar({ 'events': evnts, 'weekStart': 1 })
+    .on('changeDay', function(event){
+      $('#myResa').modal();
+      $('#date').val(event.day.valueOf() +'-'+ event.month.valueOf() +'-'+ event.year.valueOf());
+    })
+    .on('onEvent', function(event){ })
+    .on('onNext', function(event){ })
+    .on('onPrev', function(event){ })
+    .on('onCurrent', function(event){ });
+  });
+</script>

@@ -1,0 +1,20 @@
+---
+name: Résas
+description: Réservation du local
+slug: resas
+label_field_name: date
+order_by: date
+order_direction: asc
+group_by: groupe
+public_submission_enabled: true
+fields:
+- date:
+    label: date
+    type: date
+    required: true
+- groupe:
+    label: groupe
+    type: belongs_to
+    required: true
+    class_name: groupes
+    ui_enabled: true

@@ -1,0 +1,44 @@
+---
+title: AgendaStud
+slug: agendastud
+listed: true
+published: true
+cache_strategy: none
+response_type: text/html
+position: 0
+---
+<!DOCTYPE html>
+<html lang='fr'>
+  <head>
+    <meta charset='utf-8'>
+    <title>{{ page.title }}</title>
+    <meta content='width=device-width, initial-scale=.9' name='viewport'>
+    {% seo %}
+    {{ 'bootstrap.css' | stylesheet_tag }}
+    {{ 'bootstrap-responsive.css' | stylesheet_tag }}
+    {{ 'application.css' | stylesheet_tag }}
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+  </head>
+  <body>
+    <div class='container-narrow'>
+      {% include 'navbar' %}
+      {% block 'main' %}
+      {% editable_text "Hello", hint: "L'accroche du site", priority: 1 %}
+      <h1>Hello, world!</h1>
+      <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+      {% endeditable_text %}
+      {% include 'news' %}
+      {% endblock %}
+      {% block 'cloud' %}
+      {% endblock %}
+      <hr>
+      {% include footer %}
+    </div>
+    {{ 'bootstrap.js' | javascript_tag }}
+    {{ 'bootstrap.calendar.js' | javascript_tag }}
+  </body>
+</html>

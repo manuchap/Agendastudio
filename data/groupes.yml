@@ -1,0 +1,39 @@
+- Shenkin:
+    _slug: shenkin
+    nom: Shenkin
+    bio: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed enim
+      augue, a molestie nisl. Fusce pulvinar cursus nunc eget pharetra. Integer cursus
+      feugiat sem, sed malesuada nibh facilisis a. Etiam ut libero urna. Sed sit amet
+      elementum ligula. Nam nibh orci, pellentesque quis dignissim ac, adipiscing
+      ut dolor. Ut et porttitor mauris. Vestibulum et magna erat, vel fringilla quam.
+      Curabitur ut augue arcu, et sodales enim. In vitae mauris non lectus laoreet
+      facilisis quis at ligula. Sed non metus quis purus ultrices dapibus. Nulla eget
+      lacus eget sapien dapibus viverra et vel nulla. Curabitur quis interdum metus.
+      Maecenas eleifend aliquam semper.<br></p>"
+    soundcloud: shenkin-theband
+- Chineseman:
+    _slug: chineseman
+    nom: Chineseman
+    bio: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed enim
+      augue, a molestie nisl. Fusce pulvinar cursus nunc eget pharetra. Integer cursus
+      feugiat sem, sed malesuada nibh facilisis a. Etiam ut libero urna. Sed sit amet
+      elementum ligula. Nam nibh orci, pellentesque quis dignissim ac, adipiscing
+      ut dolor. Ut et porttitor mauris. Vestibulum et magna erat, vel fringilla quam.
+      Curabitur ut augue arcu, et sodales enim. In vitae mauris non lectus laoreet
+      facilisis quis at ligula. Sed non metus quis purus ultrices dapibus. Nulla eget
+      lacus eget sapien dapibus viverra et vel nulla. Curabitur quis interdum metus.
+      Maecenas eleifend aliquam semper.<br></p>"
+    soundcloud: chineseman
+- Gramatik:
+    _slug: gramatik
+    nom: Gramatik
+    bio: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed enim
+      augue, a molestie nisl. Fusce pulvinar cursus nunc eget pharetra. Integer cursus
+      feugiat sem, sed malesuada nibh facilisis a. Etiam ut libero urna. Sed sit amet
+      elementum ligula. Nam nibh orci, pellentesque quis dignissim ac, adipiscing
+      ut dolor. Ut et porttitor mauris. Vestibulum et magna erat, vel fringilla quam.
+      Curabitur ut augue arcu, et sodales enim. In vitae mauris non lectus laoreet
+      facilisis quis at ligula. Sed non metus quis purus ultrices dapibus. Nulla eget
+      lacus eget sapien dapibus viverra et vel nulla. Curabitur quis interdum metus.
+      Maecenas eleifend aliquam semper.<br></p>"
+    soundcloud: gramatik

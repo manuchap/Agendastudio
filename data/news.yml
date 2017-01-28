@@ -1,0 +1,27 @@
+- '001':
+    _slug: '001'
+    titre: '001'
+    date: '2017-01-04'
+    texte: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed enim
+      augue, a molestie nisl. Fusce pulvinar cursus nunc eget pharetra. Integer cursus
+      feugiat sem, sed malesuada nibh facilisis a. Etiam ut libero urna. Sed sit amet
+      elementum ligula.<br></p>"
+    photo: "/samples/content_entries/DSCN4177.JPG"
+- '002':
+    _slug: '002'
+    titre: '002'
+    date: '2017-01-12'
+    texte: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed enim
+      augue, a molestie nisl. Fusce pulvinar cursus nunc eget pharetra. Integer cursus
+      feugiat sem, sed malesuada nibh facilisis a. Etiam ut libero urna. Sed sit amet
+      elementum ligula.<br></p>"
+    photo: "/samples/content_entries/DSCN4156.JPG"
+- '003':
+    _slug: '003'
+    titre: '003'
+    date: '2017-01-21'
+    texte: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed enim
+      augue, a molestie nisl. Fusce pulvinar cursus nunc eget pharetra. Integer cursus
+      feugiat sem, sed malesuada nibh facilisis a. Etiam ut libero urna. Sed sit amet
+      elementum ligula.<br></p>"
+    photo: "/samples/content_entries/DSCN4183.JPG"

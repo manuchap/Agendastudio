@@ -1,0 +1,9 @@
+---
+name: AgendaStudio
+locales: [fr]
+subdomain: agendastudio
+domains: [agendastudio.studiowan.fr]
+seo_title: agendastudio
+meta_keywords: some meta keywords
+meta_description: some meta description
+timezone: Paris

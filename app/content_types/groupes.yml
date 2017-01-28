@@ -1,0 +1,19 @@
+---
+name: Groupes
+slug: groupes
+label_field_name: nom
+order_by: created_at
+order_direction: asc
+fields:
+- nom:
+    label: nom
+    type: string
+    required: true
+- bio:
+    label: bio
+    type: text
+    required: true
+    text_formatting: html
+- soundcloud:
+    label: soundcloud
+    type: string

@@ -1,0 +1,30 @@
+<div class='navbar'>
+  <div class='navbar-inner'>
+    <div class='container'>
+      <a class='btn btn-navbar' data-target='.nav-collapse' data-toggle='collapse'>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+      </a>
+      <a class='brand' href='/'>{{ site.name }}</a>
+      <div class='nav-collapse collapse'>
+        <ul class="nav">
+		  <li class="dropdown">
+		    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		      Groupes
+		    <b class="caret"></b>
+		    </a>
+		    <ul class="dropdown-menu">
+        {% for groupe in contents.groupes %}
+          <li><a href="{% path_to groupe %}">{{ groupe.nom }}</a></li>
+        {% endfor %}
+		    </ul>
+		  </li>
+		</ul>
+        <ul class="nav">
+          {% nav site, exclude: 'groupes', no_wrapper: true %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class='carousel slide' id='myCarousel'>
+  <div class='carousel-inner'>
+    <div class='item active'>
+      {{ contents.news.first.photo | image_tag }}
+      <div class='carousel-caption'>
+        <p>{{ contents.news.first.texte }}</p>
+        <p>{{ contents.news.first.date | localized_date: '%d %B %Y', 'fr' }}</p>
+      </div>
+    </div>
+    {% for new in contents.news %}
+    {% if new.next.photo %}
+    <div class='item'>
+      {{ new.next.photo | image_tag }}
+      <div class='carousel-caption'>
+        <p>{{ new.next.texte }}</p>
+        <p>{{ new.next.date | localized_date: '%d %B %Y', 'fr' }}</p>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <a class='carousel-control left' data-slide='prev' href='#myCarousel'>&lsaquo;</a>
+  <a class='carousel-control right' data-slide='next' href='#myCarousel'>&rsaquo;</a>
+</div>
+<div class="alert alert-info visible-desktop" style="text-align: center"><button type="button" class="close" data-dismiss="alert">×</button><i class="icon-warning-sign"></i> <span class="icon-bar"></span>Stoppez le diaporama en plaçant le curseur sur une photo.</div>

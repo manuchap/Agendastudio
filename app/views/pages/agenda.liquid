@@ -1,0 +1,28 @@
+---
+title: Agenda
+listed: true
+published: true
+position: 2
+---
+{% extends index %}
+{% block main %}
+<div class='row-fluid'>
+  <div class='span6'>
+    <div id='calendar'></div>
+    <br />
+  </div>
+  <div class='span6'>
+    <h2 style='text-align: center; color: rgba(0,0,0,.3)'>Réservations:</h2>
+    <div class='well'>
+      <ul>
+        <li>Cliquer sur une date pour la réserver.</li>
+        <li>Les dates encadrées sont déjà prises.</li>
+        <li>Cliquez dessus pour savoir par qui.</li>
+      </ul>
+    </div>
+    <div style="text-align: center">{{ 'little_girl_dancing.gif' | theme_image_tag }}</div>
+  </div>
+</div>
+{% include 'fetchresa' %}
+{% include 'modalresa' %}
+{% endblock %}

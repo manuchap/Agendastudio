@@ -1,0 +1,27 @@
+---
+title: Page non trouvée
+slug: '404'
+position: 99
+listed: false
+published: true
+is_layout: false
+---
+{% extends index %}
+{% block 'main' %}
+<div class='jumbotron'>
+  <div class='success'></div>
+  <h1>
+    <img alt='' src="{{ '404.png' | theme_image_url }}" style='float: right;'>
+  </h1>
+  <h1>
+    Erreur 404!
+    <br>
+    &Agrave; pas trouv&eacute; la page...&nbsp;
+  </h1>
+  <h4>A part &ccedil;a, &ccedil;a va?</h4>
+  <h4>
+    Allez man, retourne &agrave; l'accueil en cliquant
+    <a href='/'>ici</a>.
+  </h4>
+</div>
+{% endblock %}

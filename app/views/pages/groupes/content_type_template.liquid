@@ -1,0 +1,19 @@
+---
+title: Groupes template
+slug: content_type_template
+position: 99
+listed: false
+published: true
+is_layout: false
+content_type: groupes
+---
+{% extends index %}
+{% block 'main' %}
+<h1>{{ groupe.nom }}</h1>
+{{ groupe.bio }}
+{% endblock %}
+{% block 'cloud' %}
+{% if groupe.soundcloud %}
+{% include 'soundcloud' %}
+{% endif %}
+{% endblock %}

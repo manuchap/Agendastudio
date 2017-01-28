@@ -1,0 +1,21 @@
+---
+name: Messages
+description: Messages envoyés depuis le site (archives).
+slug: messages
+label_field_name: nom
+order_by: created_at
+order_direction: asc
+public_submission_enabled: true
+fields:
+- nom:
+    label: nom
+    type: string
+    required: true
+- email:
+    label: email
+    type: string
+- message:
+    label: message
+    type: text
+    required: true
+    text_formatting: none
