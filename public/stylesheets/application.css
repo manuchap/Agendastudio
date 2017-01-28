@@ -49,7 +49,7 @@ a:hover {
 .month {
   color: rgba(0, 0, 0, 0.3);
   font-size: 3em;
-  margin: -27px 0px 10px 155px; }
+  margin: -40px 0px 10px 155px; }
 
 .calendar {
   table-layout: fixed; }
@@ -68,9 +68,9 @@ a:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; }
 
 .calendar TD, TD.day {
-  height: 65px;
-  width: 50px;
-  font-size: 32px;
+  height: 50px;
+  width: 40px;
+  font-size: 30px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.3);
   text-align: center;

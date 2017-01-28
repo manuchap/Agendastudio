@@ -20,23 +20,23 @@ editable_elements:
       <h1>Youtokintoumi?</h1>
       <br>
     </div>
-    <form action="{{ contents.messages.public_submission_url }}" id="contactform" method="post" name="contact">
-      <p>
-        <label for="nom">nom</label>
-        <input id="nom" name="content[nom]" placeholder="Prénom et nom" required="required" tabindex="1" type="text">
-      </p>
-      <p>
-        <label for="email">email</label>
-        <input id="email" name="content[email]" placeholder="exemple@domaine.com" required="required" tabindex="2" type="text">
-      </p>
-      <p>
-        <label for="comment">message</label>
-        <textarea id="comment" name="content[message]" required="required" tabindex="3"></textarea>
-      </p>
-      <p class="action">
-        <input class="btn btn-primary" name="submit" tabindex="4" type="submit" value="Envoyer">
-      </p>
-    </form>
+    {% model_form 'messages', success: '/yepm', error: '/nopm' %}
+    <p>
+      <label for="nom">Nom</label>
+      <input type="text" name="content[nom]" value="{{message.nom}}">
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input type="text" name="content[email]" value="{{message.email}}">
+    </p>
+    <p>
+      <label for="comment">Message</label>
+      <textarea name="content[message]">{{message.message}}</textarea>
+    </p>
+    <p>
+      <input class="btn btn-primary" type="submit" value="Envoyer">
+    </p>
+    {% endmodel_form %}
   </div>
   <div class="span-6">
     {% editable_text "infos", hint: "page contact", priority: 4 %}

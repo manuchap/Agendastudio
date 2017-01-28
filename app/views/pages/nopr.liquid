@@ -1,0 +1,26 @@
+---
+title: Erreur - reservation
+listed: false
+published: true
+---
+{% extends index %}
+{% block main %}
+<div class="row text-center">
+  <div class="col col-md-6 col-md-offset-3">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title">AIE!<br></h3>
+      </div>
+      <div class="panel-body">
+        <p class="lead">Une erreur s'est produite!</p>
+        <ul>
+          {% for error in resa.errors %}
+          <li>{{error[0] | capitalize}} -  {{error[1]}}</li>
+          {% endfor %}
+        </ul>
+        <p>Essayez à nouveau.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

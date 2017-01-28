@@ -1,31 +1,21 @@
-<form id="resaform" method="post" action="{{ contents.resas.public_submission_url }}">
-  {% csrf_param %}
-  <input type="hidden" value="/succes" name="success_callback" />
-  <input type="hidden" value="/erreur" name="error_callback" />
-  {% if formation.errors %}
-  <p>Erreurs:</p>
-  <ul>
-    {% for error in formation.errors %}
-    <li>{{ error[0] | capitalize }} -  {{ error[1] }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-  <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal hide fade" id="myResa" role="dialog" tabindex="-1">
-    <div class="modal-header">
-      <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
-      <h3 id="myModalLabel">Réservations</h3>
-    </div>
-    <div class="modal-body">
-      <select multiple="multiple" id="groupe" name="content[groupe]" value="{{ groupe.nom }}">
-        {% for groupe in contents.groupes %}
-        <option value="{{ groupe.nom }}">{{ groupe.nom }}</option>
-        {% endfor %}
-      </select>
-      <input type="hidden" id="date" name="content[date]" value="nil">
-    </div>
-    <div class="modal-footer">
-      <button aria-hidden="true" class="btn" data-dismiss="modal">Annuler</button>
-      <button class="btn btn-primary" name="submit" type="submit" id="submit" >Sauvegarder</button>
-    </div>
+{% model_form 'resas', success: '/yepr', error: '/nopr' %}
+<div aria-hidden="true" aria-labelledby="myModalLabel" class="modal hide fade" id="myResa" role="dialog">
+  <div class="modal-header">
+    <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+    <h3 id="myModalLabel">Réservations</h3>
   </div>
-</form>
+  <div class="modal-body">
+    <select multiple="multiple" onchange="$('#groupe').val(this.value);">
+      {% for groupe in contents.groupes %}
+      <option>{{groupe.nom | downcase}}</option>
+      {% endfor %}
+    </select>
+    <input type="hidden" id="groupe" name="content[groupe]" value="nil">
+    <input type="hidden" id="date" name="content[date]" value="nil">
+  </div>
+  <div class="modal-footer">
+    <button aria-hidden="true" class="btn" data-dismiss="modal">Annuler</button>
+    <button class="btn btn-primary" type="submit">Sauvegarder</button>
+  </div>
+</div>
+{% endmodel_form %}
